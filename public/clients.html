@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clients</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="clients.html">Clients</a>
+      <a href="products.html">Products</a>
+      <a href="invoices.html">Invoices</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <h1>Clients</h1>
+
+    <form id="clientForm" class="panel">
+      <h2 id="formTitle">Add client</h2>
+      <input id="name" placeholder="Client name" required>
+      <input id="address" placeholder="Address">
+      <input id="gstin" placeholder="GSTIN" maxlength="15">
+      <input id="state" placeholder="State">
+      <input id="state_code" placeholder="State code (e.g. 36)" maxlength="2">
+      <input id="phone" placeholder="Phone">
+      <button type="submit">Save client</button>
+      <button type="button" id="cancelBtn" hidden>Cancel edit</button>
+      <p id="message"></p>
+    </form>
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>GSTIN</th><th>State</th><th>Phone</th><th>Invoices</th><th></th></tr>
+      </thead>
+      <tbody id="clientRows"></tbody>
+    </table>
+  </div>
+  <script src="common.js"></script>
+  <script src="clients.js"></script>
+</body>
+</html>

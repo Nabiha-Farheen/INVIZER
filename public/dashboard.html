@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1 id="title">Dashboard</h1>
+    <p><a href="layout.html">Layout</a></p>
+    <p><a href="profile.html">Business profile</a></p>
+    <p><a href="clients.html">Clients</a></p>
+    <p><a href="products.html">Products</a></p>
+    <p><a href="invoices.html">Invoices</a></p>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="common.js"></script>
+  <script>
+    requireLogin().then(b => { if (b) document.getElementById('title').textContent = b.name; });
+  </script>
+</body>
+</html>

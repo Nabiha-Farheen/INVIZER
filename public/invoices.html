@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoices</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="clients.html">Clients</a>
+      <a href="products.html">Products</a>
+      <a href="invoices.html">Invoices</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <h1>Invoices</h1>
+
+    <form id="invoiceForm" class="panel">
+      <h2>New invoice</h2>
+      <label for="client">Client</label>
+      <select id="client" required></select>
+
+      <label for="invoice_date">Invoice date</label>
+      <input id="invoice_date" type="date" required>
+
+      <label for="due_date">Due date (optional)</label>
+      <input id="due_date" type="date">
+
+      <h3>Products</h3>
+      <div id="itemRows"></div>
+      <button type="button" id="addRow">+ Add product</button>
+
+      <p>Subtotal before GST: <strong id="subtotal">0.00</strong></p>
+      <button type="submit">Create invoice</button>
+      <p id="message"></p>
+    </form>
+
+    <h2 id="listTitle">All invoices</h2>
+    <p id="showAll" hidden><a href="invoices.html">Show all invoices</a></p>
+    <table>
+      <thead>
+        <tr><th>Invoice no.</th><th>Date</th><th>Client</th><th>Total</th><th>Status</th><th></th></tr>
+      </thead>
+      <tbody id="invoiceRows"></tbody>
+    </table>
+  </div>
+  <script src="common.js"></script>
+  <script src="invoices.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="clients.html">Clients</a>
+      <a href="products.html">Products</a>
+      <a href="invoices.html">Invoices</a>
+      <a href="profile.html">Business profile</a>
+      <a href="layout.html">Layout</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <h1>Invoice layout</h1>
+    <p>Choose which columns and extra boxes appear on your bills, and in what order.</p>
+
+    <div class="panel">
+      <h2>Item columns</h2>
+      <div id="columns"></div>
+      <label>Add a standard column</label>
+      <div class="item-row">
+        <select id="stdSelect"></select>
+        <button type="button" id="addStd">Add</button>
+      </div>
+      <label>Add a custom column (e.g. Packing, Batch No.)</label>
+      <div class="item-row">
+        <input id="customCol" placeholder="Column name">
+        <button type="button" id="addCustom">Add</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Extra header boxes</h2>
+      <p>Details typed in for each invoice (e.g. Delivery Note, Dispatched through).</p>
+      <div id="headerFields"></div>
+      <div class="item-row">
+        <input id="newHeader" placeholder="Box name">
+        <button type="button" id="addHeader">Add</button>
+      </div>
+    </div>
+
+    <button id="save">Save layout</button>
+    <p id="message"></p>
+  </div>
+  <script src="common.js"></script>
+  <script src="layout.js"></script>
+</body>
+</html>

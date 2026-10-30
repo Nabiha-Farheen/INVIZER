@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="clients.html">Clients</a>
+      <a href="products.html">Products</a>
+      <a href="invoices.html">Invoices</a>
+      <a href="profile.html">Business profile</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <h1>Business profile</h1>
+    <p>These details appear on your invoices.</p>
+
+    <form id="profileForm" class="panel">
+      <label for="name">Business name</label>
+      <input id="name" required>
+      <label for="address">Address</label>
+      <input id="address">
+      <label for="gstin">GSTIN</label>
+      <input id="gstin" maxlength="15">
+      <label for="state">State</label>
+      <input id="state">
+      <label for="state_code">State code (e.g. 36)</label>
+      <input id="state_code" maxlength="2">
+      <label for="dl_no">Drug licence no.</label>
+      <input id="dl_no" maxlength="50">
+      <label for="cin">CIN</label>
+      <input id="cin" maxlength="21">
+      <label for="pan">PAN</label>
+      <input id="pan" maxlength="10">
+      <label for="fssai">FSSAI no.</label>
+      <input id="fssai" maxlength="14">
+      <label for="invoice_prefix">Invoice prefix (e.g. SPI)</label>
+      <input id="invoice_prefix" maxlength="10">
+      <button type="submit">Save profile</button>
+      <p id="message"></p>
+    </form>
+  </div>
+  <script src="common.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
